@@ -20,8 +20,7 @@ Answer: As many as need.
 
 ### 5. Give an example of when you could use polymorphism.
 
-Answer: As we discussed in 3, java allow us to use abstract class or interface to implement polymorphism. But when we use 
-abstract class and when we use interface has a little different. 
+Answer: As we discussed in 3, java allow us to use abstract class or interface to implement polymorphism. 
 ![Image of Polymorphism](./image/Action-Polymorphism.png)
 
 
