@@ -20,7 +20,24 @@ Answer: As many as need.
 
 ### 5. Give an example of when you could use polymorphism.
 
-Answer: As we discussed in 3, java allow us to use abstract class or interface to implement polymorphism. 
+Answer: As we discussed in 3, java allow us to use abstract class or interface to implement polymorphism. The image below 
+shows the example we could use polymorphism. Suppose we are designing a network management system. If an alert produced (for example, CPU temperature too high, device mount/unmount, user login/logout). We defined these alert into different level and trige different action. CPU temperature too high can be urgent, should send a shortmessage via mobile phone to the administrator, device mount/unmount can be important but not very urgent, can send an email to the administrator, user login/logout can write to a log file. 
+
+We can define an abstract class Action and an abstract method called send which has two arguments, one is message and the other is who will receive this message. We can write the java code below:
+
+```
+//  If alert == device mount/unmount
+Action action = new Email(String message, String recipient);
+action.send(message, recipient)  
+```
+
+We can also define an Interface called sendable(in this interface, there has a method called send which has two arguments) and let the class Email, ShortMessage and FileLog implement this interface. We can write the java code below:
+```
+//  If alert == CPU temperature too high
+SendAble sendable = new ShortMessage(String message, String recipient);
+sendable.send(message, recipient);
+```
+
 ![Image of Polymorphism](./image/Action-Polymorphism.png)
 
 
